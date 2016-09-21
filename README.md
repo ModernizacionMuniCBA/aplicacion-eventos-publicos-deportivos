@@ -1,2 +1,3 @@
 # eventos-turismo
-Aplicación de eventos turísticos públicos como información al vecino
+Aplicación de eventos públicos vinculados a turísmo de la Ciudad de Córdoba.  
+
