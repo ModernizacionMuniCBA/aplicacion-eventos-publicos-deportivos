@@ -2,16 +2,16 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" 
-        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' https://gobiernoabierto.cordoba.gob.ar https://www.google-analytics.com; 
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' https://gobiernoabierto.cordoba.gob.ar https://www.google-analytics.com;
                     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-                    media-src *; 
+                    media-src *;
                     script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://gobiernoabierto.cordoba.gob.ar https://code.jquery.com;
                     font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com">
-                    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Eventos Turismo Ciudad de Córdoba</title>
+    <title>Agenda de la Feria</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:200,400,500" rel="stylesheet">
@@ -24,62 +24,119 @@
 
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/index.js"></script>
-    
+
   </head>
   <body>
     <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-	  <div class="menu-bg"></div>
-	  <div class="menu-bg-green"></div>
+      <ul class="nav navmenu-nav">
+        <li>
+          <div class="row">
+            <div class="col-xs-12">
+              <div style="height: 57px; background-color: #5AC0BE; width:100%;">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <img src="img/logo-cultura-menu.png" class="img-responsive img-menu-cultura">
+                  </div>
+                  <div class="col-xs-6">
+                    <img src="img/muni-menu.png" class="img-responsive img-menu-muni">
+                  </div>
+                </div>
+              </div>
+            </div>
 
-	  <ul class="nav navmenu-nav">
-	    <li><a href="index.html">INICIO</a></li>
-	  </ul>
-	  <ul class="nav navmenu-nav" id="groups-menu">
-	    <li class="li-title">ESPACIOS</li>
-	    <div class="li-title-borde"></div>
-	  </ul>
-	  <ul class="nav navmenu-nav" id="categories-menu">
-	    <li class="li-title">ACTIVIDADES</li>
-	    <div class="li-title-borde"></div>
-	  </ul>
-	  <ul class="nav navmenu-nav">
-	    <li><a href="about.html">SOBRE ESTA APP</a></li>
-	  </ul>
-	</nav>
+          </div>
+        </li>
+      </ul>
+  	  <ul class="nav navmenu-nav">
+  	    <li><a href="index.html">INICIO</a></li>
+  	  </ul>
+      <div class="nav navmenu-nav">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading collapsed" role="tab" id="headingEventos" data-parent="#accordion" data-toggle="collapse" href="#collapseEventos" aria-expanded="false" aria-controls="collapseEventos">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button">
+                  EVENTOS
+                </a>
+              </h4>
+            </div>
+            <div id="collapseEventos" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEventos">
+              <div class="panel-body" id="events-menu">
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading collapsed" role="tab" id="headingTipo" data-toggle="collapse" data-parent="#accordion" href="#collapseTipo" aria-expanded="false" aria-controls="collapseTipo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button">
+                  TIPO DE ACTIVIDAD
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTipo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTipo">
+              <div class="panel-body" id="categories-menu">
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading collapsed" role="tab" id="headingDisciplinas" data-toggle="collapse" data-parent="#accordion" href="#collapseDisciplinas" aria-expanded="false" aria-controls="collapseDisciplinas">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button">
+                  DISCIPLINAS
+                </a>
+              </h4>
+            </div>
+            <div id="collapseDisciplinas" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDisciplinas">
+              <div class="panel-body" id="disciplinas-menu">
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading collapsed" role="tab" id="headingLugares" data-toggle="collapse" data-parent="#accordion" href="#collapseLugares" aria-expanded="false" aria-controls="collapseLugares">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button">
+                  LUGARES
+                </a>
+              </h4>
+            </div>
+            <div id="collapseLugares" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLugares">
+              <div class="panel-body" id="places-menu">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  	  <ul class="nav navmenu-nav" style="margin-bottom: 30px;">
+  	    <li><a href="about.html">SOBRE ESTA APP</a></li>
+  	  </ul>
+    </nav>
 	<div class="navbar navbar-feria navbar-fixed-top">
 	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
 	  </button>
-	  <p class="navmenu-brand">Espacios</p>
+    <img src="img/muni-about.png" class="img-responsive navbar-muni pull-right">
+	  <p class="navmenu-brand navmenu-brand-simple">Búsqueda</p>
 	  <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
 	  <div class="searchField">
-		  
+
 		  <div class="row">
 			  <div class="col-xs-12">
 				  <form id="searchForm" action="search.html">
-				  	<input type="text" name="search" id="searchField" placeholder="Buscar un evento.."> 
+				  	<input type="text" name="search" id="searchField" placeholder="Buscar un evento..">
 				  </form>
 			  </div>
 		  </div>
 	  </div>
 	</div>
-	
-	<div class="img-holder home navbar-fixed-top">
-		<div class="fixed-img home more_op"></div>
-		<div class="foreground">
-			<div class="img-text">
-				<p class="text-feria-img">Búsqueda: </p>
-				<p class="btn btn-feria not-hover" id="searched-string"></p>
-				<div class="event-date-time index-recom-bg">
-			    	<div class="col-xs-12"><h1 class="index-recom">Resultados de tu búsqueda</h1></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+
+
     <div class="container">
+      <p class="text-feria-img">Búsqueda: <span id="searched-string"></span> </p>
+      <div class="col-xs-12"><h1 class="index-recom">Resultados de tu búsqueda</h1></div>
+      <div class="col-xs-12"><div class="results-divider"></div></div>
+
 	    <div id="event-list">
 		     <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
 	    </div>
@@ -92,11 +149,15 @@
     <script src="js/page_size.js"></script>
     <script src="js/url_spliter.js"></script>
     <script src="js/dateformat.js"></script>
-	<script src="js/get_categories.js"></script>
-	<script src="js/get_groups.js"></script>
-	<script src="js/h_scroll.js"></script>
+    <!-- BEGIN: MENU  -->
+    <script src="js/get_events.js"></script>
+    <script src="js/get_categories.js"></script>
+    <script src="js/get_places.js"></script>
+    <script src="js/get_disciplinas.js"></script>
     <script src="js/search_bar.js"></script>
-    <script src="js/get_search_results.js"></script>   
+    <!--  END: MENU -->
+	<script src="js/h_scroll.js"></script>
+    <script src="js/get_search_results.js"></script>
 
 	<script>
 		if (inCordova) {
