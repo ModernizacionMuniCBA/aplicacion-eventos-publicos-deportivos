@@ -1,6 +1,6 @@
 	function searchFunc() {
 	  	$(".searchField").css('display', 'inline');
-	  	$(".navbar-feria").css('background-color', '#F7F7F7');
+	  	$(".navbar-feria").css('background-color', '#4b53ef');
 
 	  	$("#searchField").focus();
 	}
@@ -11,7 +11,7 @@
 	    if (!container.is(e.target) // if the target of the click isn't the container...
 	        && container.has(e.target).length === 0) // ... nor a descendant of the container
 	    {
-		    $(".navbar-feria").css('background-color', '#FFF');
+		    $(".navbar-feria").css('background-color', '#4b53ef');
 			$('#searchForm')[0].reset();
 	        container.hide();
 					e.preventDefault();

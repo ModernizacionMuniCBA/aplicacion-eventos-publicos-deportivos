@@ -31,7 +31,7 @@
         <li>
           <div class="row">
             <div class="col-xs-12">
-              <div style="height: 57px; background-color: #5AC0BE; width:100%;">
+              <div class="side-navbar-title">
                 <div class="row">
                   <div class="col-xs-6">
                     <img src="img/logo-cultura-menu.png" class="img-responsive img-menu-cultura">
@@ -51,7 +51,7 @@
   	  </ul>
       <div class="nav navmenu-nav">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
+          <!-- <div class="panel panel-default">
             <div class="panel-heading collapsed" role="tab" id="headingEventos" data-parent="#accordion" data-toggle="collapse" href="#collapseEventos" aria-expanded="false" aria-controls="collapseEventos">
               <h4 class="panel-title">
                 <a class="collapsed" role="button">
@@ -63,7 +63,7 @@
               <div class="panel-body" id="events-menu">
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="panel panel-default">
             <div class="panel-heading collapsed" role="tab" id="headingTipo" data-toggle="collapse" data-parent="#accordion" href="#collapseTipo" aria-expanded="false" aria-controls="collapseTipo">
               <h4 class="panel-title">
@@ -115,10 +115,11 @@
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
 	  </button>
+    <p class="navmenu-brand navmenu-brand-corto">Agenda</p>
     <img src="img/muni-about.png" class="img-responsive navbar-muni pull-right">
-    <div class="filtro-title-completo" style="margin-top: 15px;"><p class="navmenu-brand filtro-title"></p></div>
+    <!-- <div class="filtro-title-completo" style="margin-top: 15px;"><p class="navmenu-brand filtro-title">a</p></div> -->
 	  <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
-    <div class="row filtro-title-corto"><div class="col-xs-12"><p class="navmenu-brand filtro-title"></p></div></div>
+    <!-- <div class="row filtro-title-corto"><div class="col-xs-12"><p class="navmenu-brand filtro-title">a</p></div></div> -->
     <div class="searchField">
 
 		  <div class="row">
@@ -130,14 +131,24 @@
 		  </div>
 	  </div>
 	</div>
-    <div class="container">
-	    <div class="row" id="event-list">
-		    <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
-        <!-- <div class="col-xs-3 act-card-img"><div class="evento-img-cont" style="background-image: url('img/image-eventos.png');"></div></div> -->
-		    </div>
-	    </div>
-	    <div class="row" id="event-next"></div>
-    </div><!-- /.container -->
+  <div class="container">
+    <div class="row" id="event-list">
+      <div class="col-xs-12 event-item">
+        <div class="row">
+          <div class="col-xs-3 image" style="background-image: url('img/logo-turismo-sq.png');">
+          </div>
+          <div class="col-xs-8">
+            <h1 class="title">Agenda</h1>
+            <p class="description">Texto, Texto, Texto, Texto, Texto, Texto, Texto</p>
+            <p class="date">12 de Diciembre <br/>20:00Hs</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
+     </div> -->
+   </div>
+   <div class="row" id="event-next"></div>
+ </div>
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -148,14 +159,14 @@
     <script src="js/url_spliter.js"></script>
     <script src="js/get_evento.js"></script>
     <!-- BEGIN: MENU  -->
-    <script src="js/get_events.js"></script>
+    <!-- <script src="js/get_events.js"></script> -->
     <script src="js/get_categories.js"></script>
     <script src="js/get_places.js"></script>
     <script src="js/get_disciplinas.js"></script>
     <script src="js/search_bar.js"></script>
     <!--  END: MENU -->
 	  <script src="js/h_scroll.js"></script>
-
+<script src="js/get_activities.js"></script>
 	<script>
 	window.onhashchange = function() {
 		window.location.reload();

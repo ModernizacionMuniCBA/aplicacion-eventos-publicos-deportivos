@@ -24,10 +24,21 @@ function handleData(data) {
                 if (item.image != undefined) {
                     var event_image = item.image.original.replace(/^http:\/\//i, 'https://');
                 } else {
-                    var event_image = "img/default-event.png";
+                    var event_image = "img/logo-turismo-sq.png";
                 }
+                var yourString = item.descripcion; //replace with your string.
+      					var maxLength = 120; // maximum number of characters to extract
+
+      					//trim the string to the maximum length
+      					if(yourString.length > 120 ){
+      						var trimmedString = yourString.substr(0, maxLength);
+      						trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) + " ...";
+      					}else{
+      						var trimmedString = yourString;
+      					}
                 // $('#event-list').append('<a href="actividad.html#act-' + item.id + '" class="evento"><div class="row evento-card"><div class="col-xs-3 act-card-img"><div class="evento-img-cont no-margin-img" style="background-image: url(' + event_image + ');"></div></div><div class="col-xs-9"><span class="event-title">' + item.titulo + '</span><br/><span class="event-date">' + dateFormat(item.inicia, "dddd dd 'de' mmmm, h:MM TT") + '</span></div></div></a><div class="row"><div class="event-divider"></div></div>');
-                $('#event-list').append('<a href="actividad.html#act-'+item.id+'" class="evento"><div class="col-xs-12 col-sm-6 col-md-4 evento-card"><div class="col-xs-3 act-card-img"><div class="evento-img-cont no-margin-img" style="background-image: url('+event_image+');"></div></div><div class="col-xs-9"><span class="event-title">'+item.titulo+'</span><br/><span class="event-date">'+dateFormat(item.inicia, "dddd dd 'de' mmmm, h:MM TT")+'</span></div><div class="col-xs-12 act-card-img"><div class="event-divider"></div></div></div></a>');
+                // $('#event-list').append('<a href="actividad.html#act-'+item.id+'" class="evento"><div class="col-xs-12 col-sm-6 col-md-4 evento-card"><div class="col-xs-3 act-card-img"><div class="evento-img-cont no-margin-img" style="background-image: url('+event_image+');"></div></div><div class="col-xs-9"><span class="event-title">'+item.titulo+'</span><br/><span class="event-date">'+dateFormat(item.inicia, "dddd dd 'de' mmmm, h:MM TT")+'</span></div><div class="col-xs-12 act-card-img"><div class="event-divider"></div></div></div></a>');
+                $('#event-list').append('<a href="actividad.html#act-'+item.id+'"><div class="col-xs-12 event-item"><div class="row"><div class="col-xs-3 image" style="background-image: url('+event_image+');"></div><div class="col-xs-8"><h1 class="title">'+item.titulo+'</h1><p class="description">'+trimmedString+'</p><p class="date">'+dateFormat(item.inicia, "dddd dd 'de' mmmm <br>h:MM TT")+'</p></div></div></div></a>');
 
             }
         });
