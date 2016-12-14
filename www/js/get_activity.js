@@ -26,12 +26,9 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
             error: handleError,
 		});
 		var start_date = new Date();
-		var event_notes = "";
-		var event_location = "";
 		function handleError(){
 			$('.event-date').hide();
 			$('#event-esp').hide();
-      $('.evento-img-cont').hide();
 			$('#event-info').html('Este evento ya no se encuentra disponible');
       var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true)-10;
       $('body').css('padding-top', bottom);
@@ -52,21 +49,10 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 
 
       $.each(data.tipos, function(i, tag) {
-        $('.event-tags').append('<span class="tag">'+tag.nombre+'</span>');
+        $('.event-tags').append('<div class="tag-holder"><a href="filtro.html#tipo-'+ tag.id +'""><span class="tag">'+tag.nombre+'</span></a></div>');
       });
-
-      $('#event-location').html(data.lugar.nombre);
-			// $('#event-location').html('<a href="http://www.google.com/maps/place/'+data.lugar.latitud+','+data.lugar.longitud+'">'+data.lugar.nombre+'</a>');
-			event_location = data.lugar.nombre;
+      $('#event-location').append('<a class="event-location" href="filtro.html#lugar-'+ data.lugar.id +'">'+ data.lugar.nombre +'</a>');
 			$('#event-info').html(data.descripcion);
-			event_notes = data.descripcion;
-
-      if (data.image != undefined ){
-        var event_image = data.image.original.replace(/^http:\/\//i, 'https://');
-      }else{
-        var event_image = "img/default-event.png";
-      }
-      $('.evento-img-cont').css('background-image', "url("+event_image+")");
 
 			$("#share").attr("href", url);
 			$('#share-icons').append('<a href="http://twitter.com/share?url='+share_url+'&text='+page_title+'" target="_blank" class="share-btn twitter">Twitter</a>');
@@ -81,21 +67,12 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 					$('#tags').append(' | ');
 				}
 			});
-			// if (data.imagen.original != undefined){
-			// 	$('#event-image').css("background-image", "url("+data.imagen.original.replace(/^http:\/\//i, 'https://')+")");
-			// }
-			// if (data.agrupador.imagen.original != undefined){
-      //
-			// 	$('#esp-image').css("background-image", "url("+data.agrupador.imagen.original.replace(/^http:\/\//i, 'https://')+")");
-			// }
-			// $('#event-esp-link').attr('href', 'agrupador.html#agr-'+data.agrupador.id);
-			// $('#event-esp-txt').append("<p>"+data.agrupador.nombre+"</p>");
 
-      var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true)-20;
+      var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true)-20;
 			$('body').css('padding-top', bottom);
 			$('#loading').hide();
 		}
 		$(window).on('resize', function(){
-      var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true)-20;
+      var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true)-20;
 			$('body').css('padding-top', bottom);
 		});

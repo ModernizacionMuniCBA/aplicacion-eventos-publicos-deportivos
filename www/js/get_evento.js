@@ -98,7 +98,7 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 				$('#event-list').append('No se encontraron actividades');
 			}
 			$('#loading').hide();
-			var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true);
+			var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
 			$('body').css('padding-top', bottom);
 		}
 		if (dataType == "evento"){
@@ -111,11 +111,11 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 					$('.navmenu-brand').html(data.nombre);
 					$(document).prop('title', data.nombre);
 			}
-			var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true);
+			var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
 			$('body').css('padding-top', bottom);
 		}
 
 		$(window).on('resize', function(){
-			var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true);
+			var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
 			$('body').css('padding-top', bottom);
 		});

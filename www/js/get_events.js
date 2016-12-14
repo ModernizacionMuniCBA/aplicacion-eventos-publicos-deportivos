@@ -9,7 +9,7 @@ $.ajax({
 });
 function handleData(data) {
 	$.each(data.results, function(i, category) {
-		var imageToUse = "img/default-event-sq.png";
+		var imageToUse = "img/logo-turismo-sq.png";
 		if(category.imagen.thumbnail != undefined){
 			imageToUse = category.imagen.thumbnail.replace(/^http:\/\//i, 'https://');
 		}

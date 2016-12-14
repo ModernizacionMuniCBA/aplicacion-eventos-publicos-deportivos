@@ -26,127 +26,124 @@
 
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/index.js"></script>
-    <meta property='og:title' content='Agenda de la Feria'/>
+    <meta property='og:title' content='Agenda de Turismo'/>
     <meta property="og:image" content="http://modernizacionmunicba.github.io/feria-del-libro/www/img/share-img.png">
   </head>
-  <body>
-    <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-      <ul class="nav navmenu-nav">
-        <li>
-          <div class="row">
-            <div class="col-xs-12">
-              <div style="height: 57px; background-color: #5AC0BE; width:100%;">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <img src="img/logo-cultura-menu.png" class="img-responsive img-menu-cultura">
-                  </div>
-                  <div class="col-xs-6">
-                    <img src="img/muni-menu.png" class="img-responsive img-menu-muni">
+    <body class="no-top-padding body-act">
+      <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+        <ul class="nav navmenu-nav">
+          <li>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="side-navbar-title">
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <img src="img/turismo-cordobes.png" class="img-responsive img-menu-cultura">
+                    </div>
+                    <div class="col-xs-5">
+                      <img src="img/muni-menu.png" class="img-responsive img-menu-muni">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-          </div>
-        </li>
-      </ul>
-  	  <ul class="nav navmenu-nav">
-  	    <li><a href="index.html">INICIO</a></li>
-  	  </ul>
-      <div class="nav navmenu-nav">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
-            <div class="panel-heading collapsed" role="tab" id="headingEventos" data-parent="#accordion" data-toggle="collapse" href="#collapseEventos" aria-expanded="false" aria-controls="collapseEventos">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button">
-                  EVENTOS
-                </a>
-              </h4>
             </div>
-            <div id="collapseEventos" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEventos">
-              <div class="panel-body" id="events-menu">
+          </li>
+        </ul>
+        <ul class="nav navmenu-nav">
+          <li class="active"><a href="index.html">INICIO</a></li>
+        </ul>
+        <div class="nav navmenu-nav">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            
+            <div class="panel panel-default">
+              <div class="panel-heading collapsed" role="tab" id="headingTipo" data-toggle="collapse" data-parent="#accordion" href="#collapseTipo" aria-expanded="false" aria-controls="collapseTipo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button">
+                    TIPO DE ACTIVIDAD
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTipo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTipo">
+                <div class="panel-body" id="categories-menu">
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading collapsed" role="tab" id="headingDisciplinas" data-toggle="collapse" data-parent="#accordion" href="#collapseDisciplinas" aria-expanded="false" aria-controls="collapseDisciplinas">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button">
+                    DISCIPLINAS
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseDisciplinas" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDisciplinas">
+                <div class="panel-body" id="disciplinas-menu">
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading collapsed" role="tab" id="headingLugares" data-toggle="collapse" data-parent="#accordion" href="#collapseLugares" aria-expanded="false" aria-controls="collapseLugares">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button">
+                    LUGARES
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseLugares" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLugares">
+                <div class="panel-body" id="places-menu">
+                </div>
               </div>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading collapsed" role="tab" id="headingTipo" data-toggle="collapse" data-parent="#accordion" href="#collapseTipo" aria-expanded="false" aria-controls="collapseTipo">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button">
-                  TIPO DE ACTIVIDAD
-                </a>
-              </h4>
-            </div>
-            <div id="collapseTipo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTipo">
-              <div class="panel-body" id="categories-menu">
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading collapsed" role="tab" id="headingDisciplinas" data-toggle="collapse" data-parent="#accordion" href="#collapseDisciplinas" aria-expanded="false" aria-controls="collapseDisciplinas">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button">
-                  DISCIPLINAS
-                </a>
-              </h4>
-            </div>
-            <div id="collapseDisciplinas" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDisciplinas">
-              <div class="panel-body" id="disciplinas-menu">
-              </div>
+        </div>
+        <ul class="nav navmenu-nav" style="margin-bottom: 30px;">
+          <li><a href="about.html">SOBRE ESTA APP</a></li>
+        </ul>
+      </nav>
+    <div class="navbar navbar-turismo navbar-fixed-top navbar-no-shadow">
+      <div class="row">
+        <div class="col-xs-1">
+          <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="col-xs-4 col-xs-offset-6">
+          <div class="row">
+            <div class="col-xs-12 no-side-padding">
+              <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading collapsed" role="tab" id="headingLugares" data-toggle="collapse" data-parent="#accordion" href="#collapseLugares" aria-expanded="false" aria-controls="collapseLugares">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button">
-                  LUGARES
-                </a>
-              </h4>
-            </div>
-            <div id="collapseLugares" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLugares">
-              <div class="panel-body" id="places-menu">
+        </div>
+        <div class="col-xs-12">
+          <div class="searchField">
+            <div class="row">
+              <div class="col-xs-12">
+                <form id="searchForm" action="search.html">
+                  <input type="text" name="search" id="searchField" placeholder="Buscar una actividad..">
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-  	  <ul class="nav navmenu-nav" style="margin-bottom: 30px;">
-  	    <li><a href="about.html">SOBRE ESTA APP</a></li>
-  	  </ul>
-    </nav>
-	<div class="navbar navbar-feria navbar-fixed-top">
-	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-    <img src="img/muni-about.png" class="img-responsive navbar-muni pull-right">
-
-	  <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
-	  <div class="searchField">
-
-		  <div class="row">
-			  <div class="col-xs-12">
-				  <form id="searchForm" action="search.html">
-				  	<input type="text" name="search" id="searchField" placeholder="Buscar un evento..">
-				  </form>
-			  </div>
-		  </div>
-	  </div>
-    <div class="row" style="display: inline-block;">
-      <div class="col-xs-3">
-        <div class="evento-img-cont" style="background-image: url(''); margin-left:10px;"></div>
-      </div>
-      <div class="col-xs-9">
-        <h1 class="text-feria-img" id="event-name"></h1>
-        <div class="event-date-time">
-			    <h2 class="event-date" id="event-date-start"></h2>
-					<h2 class="event-date" id="event-date-end"></h2>
-				</div>
-        <div class="event-tags"></div>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-1"><img src="img/logo-actividades.png" class="img-responsive logo-act"></div>
       </div>
     </div>
-	</div>
-    <div class="container">
+    <div class="container ">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="" id="event-name"></h1>
+          <div class="event-date-time">
+  			    <h2 class="event-date" id="event-date-start"></h2>
+  					<h2 class="event-date" id="event-date-end"></h2>
+  				</div>
+          <div class="event-tags"></div>
+        </div>
+      </div>
 	    <div class="row">
 		    <div class="col-xs-12 info-evento">
           <p id="event-info"></p>
@@ -158,15 +155,16 @@
 					     <a id="calendario" href="#" class="btn btn-success calendar">Agregar a Calendario</a>
 				     </div>
 			    </div>
-          <h2 class="event-date" id="event-location"></h2>
+          <div id="event-location">En:
+          </div>
+
 
 			    <div class="row" id="share-icons">
 			    </div>
 			    <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
 		    </div>
 	    </div>
-    </div><!-- /.container -->
-
+    </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jasny-bootstrap.min.js"></script>
@@ -230,11 +228,11 @@
 				$('#calendario').hide();
 				$('#share-icons').show();
 			}
-		if (inCordova) {
-			touchAnalytics('/agenda-de-la-feria/app-evento', 'Evento app feria del libro');
-		} else {
-			ga('send', 'pageview');
-		}
+		// if (inCordova) {
+		// 	touchAnalytics('/agenda-de-la-feria/app-evento', 'Evento app feria del libro');
+		// } else {
+		// 	ga('send', 'pageview');
+		// }
     </script>
 
   </body>

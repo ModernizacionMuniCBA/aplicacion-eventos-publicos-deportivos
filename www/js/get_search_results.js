@@ -59,13 +59,13 @@ function handleData(data) {
     }
     htmlPrvNxt += '</div>'
     $('#event-list').append(htmlPrvNxt);
-    var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true);
+    var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
     $('body').css('padding-top', bottom);
     $('#loading').hide();
 
 }
 
 $(window).on('resize', function() {
-    var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true);
+    var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
     $('body').css('padding-top', bottom);
 });

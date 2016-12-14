@@ -97,16 +97,22 @@ p{
 	font-size: 1.4em;
 }
 
-.navbar-feria .navmenu-brand.filtro-title{
+.navbar-turismo .navmenu-brand.filtro-title{
 	font-size: 1.3em;
 }
 
 .navbar-muni{
 	max-height: 40px;
+  max-width: 70%;
+  margin-left: 10px;
+  padding-right: 10px;
 	display: inline-block;
-	margin-right: 10px;
 }
 
+.no-side-padding{
+  padding-left: 0;
+  padding-right: 0;
+}
 .act-card-holder{
 	/*width: 85%;
 	margin: 0 auto;*/
@@ -218,7 +224,7 @@ p{
 		color: #A8B5B9;
 }
 
-.navbar-feria{
+.navbar-turismo{
 	background-color: #4b53ef;
 	color: #FFF;
 	padding-top: 5px;
@@ -238,13 +244,13 @@ p{
 	color: #FFF;
 	text-align: right;
 }
-.navbar-feria a{
+.navbar-turismo a{
 	color: #2b8838;
 	font-size: 20px;
 }
 
 .img-menu-cultura{
-	margin-top: 5px;
+	margin-top: 20px;
 	margin-left: 5px;
 	max-height: 50px;
 }
@@ -252,20 +258,20 @@ p{
 	margin-top: 10px;
 	margin-left: -7.5px;
 }
-.navbar-feria .icon-bar{
+.navbar-turismo .icon-bar{
 	background-color: #FFF;
 }
-.navbar-feria .navbar-toggle{
+.navbar-turismo .navbar-toggle{
 	float: left;
 	margin-left: 2%;
 	margin-right: 0px;
 	z-index: 1000;
 }
-.navbar-feria .navbar-toggle span{
+.navbar-turismo .navbar-toggle span{
 	background-color: #FFF;
 	border: 1px ;
 }
-.navbar-feria .navmenu-brand{
+.navbar-turismo .navmenu-brand{
 	margin: 5px 0px;
 	padding-left: 0;
 	/*padding: 9px 0px;*/
@@ -273,31 +279,29 @@ p{
 	/*display: inline-block;*/
 	text-transform: uppercase;
 }
-.navbar-feria .navmenu-tags{
+.navbar-turismo .navmenu-tags{
 	color: #2b8838;
 	font-size: 1em;
 }
-.navbar-feria .navmenu-tags a{
+.navbar-turismo .navmenu-tags a{
 	color: #2b8838;
 	font-size: 1em;
 }
-.navbar-feria .navmenu-search{
-	margin: 4px 10px;
-	padding: 9px 9px;
+.navbar-turismo .navmenu-search{
 	float: right;
 	display: inline-block;
 	background-color: transparent;
 	color: #FFF;
 	border: none;
 }
-.navbar-feria .navmenu-search:hover{
+.navbar-turismo .navmenu-search:hover{
 	border-radius: 50%;
 	background-color: #fff;
 	color: #000;
 	border: 1px solid #fff;
 }
 
-.text-feria-img{
+.text-turismo-img{
 	text-transform: uppercase;
 	font-weight: 500;
 }
@@ -325,8 +329,8 @@ div.circle-image-li{
 	height:auto;
 	display:block;
 	padding-top:80%;
-	/*border-radius:50%;*/
-	border-radius: 5px;
+	border-radius:50%;
+	/*border-radius: 5px;*/
 	border: 1px solid #f0f0f0;
 	background-position: initial;
 	background-repeat: no-repeat;
@@ -347,7 +351,7 @@ h1{
 .evento{
 	padding: 5px 0px;
 	color: #000;
-	border-bottom: 1px solid #e0e0e0;
+	/*border-bottom: 1px solid #e0e0e0;*/
 	text-decoration: none;
 }
 
@@ -357,6 +361,14 @@ h1{
 .evento .event-date{
 	font-size: 1em;
 }
+#event-name{
+	font-size: 1.2em;
+	color: #000;
+	margin-top: 30px;
+  text-transform: none;
+	font-family: 'Gotham-medium', sans-serif;
+}
+
 #event-time{
 	text-align: right;
 	margin-right: 5px;
@@ -364,9 +376,7 @@ h1{
 #event-date{
 	text-align: center;
 }
-.info-evento{
-	background-color: #FFF;
-}
+
 p#event-info{
 	margin-top: 20px;
 	color: #A8B5B9;
@@ -374,37 +384,27 @@ p#event-info{
 #event-location{
 	margin-bottom: 20px;
 }
-
 .event-tags{
-	margin-left: 5px;
+  margin-top: 10px;
+}
+.event-tags .tag-holder{
+	margin: 7.5px 5px;
+  display: inline-block;
 }
 .event-tags .tag{
 	padding:5px 10px;
-	margin: 10px 5px;
-	background-color: #2b8838;
-	color: #fff;
+	background-color: #4B53EF;
+	color: #FFF;
+  border: 2px solid #4B53EF;
 	border-radius: 5px;
 }
 .info-evento .event-date{
 	font-size: 1.1em;
 	font-weight: 200;
 }
-.info-evento #event-location.event-date{
-	font-weight: 300;
+.event-location{
+  font-family: "Gotham-book", sans-serif;
 }
-
-
-#event-name{
-	font-size: 1.2em;
-	font-weight: 300;
-	color: #2b8838;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	font-family: 'Roboto', sans-serif;
-}
-
-
 .navmenu-nav .nombre-tipo{
 	padding-top: 7.5px;
 	margin-left: -15px;
@@ -417,7 +417,7 @@ p#event-info{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin:0;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
 	margin-top: -5px;
 	font-weight: 500;
 	color: #A8B5B9;
@@ -465,16 +465,18 @@ p#event-info{
 }
 .searchField input:focus {
     outline: none !important;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow:none;
 }
 .page-prev{
 	margin-left: 25px;
-	color: #2b8838;
+	color: #4B53EF;
 }
 
 .page-next{
 	margin-right: 25px;
-	color: #2b8838;
+	color: #4B53EF;
 }
 .pager li>a, .pager li>span{
 	background-color: transparent;
@@ -527,6 +529,11 @@ calendar{
 }
 
 @media (min-width: 0) {
+  .navbar-turismo .navmenu-search{
+  	margin-top: 10px;
+  	padding: 2px 2px;
+    font-size: 0.8em;
+  }
   .navbar-toggle {
     display: block;
   }
@@ -542,17 +549,31 @@ calendar{
 	.filtro-title-corto{
 		display: block;
 	}
+  .navbar-muni{
+    margin-top: 9px;
+  }
 }
 @media (min-width: 400px) {
+  .navbar-turismo .navmenu-search{
+  	margin-top: 6px;
+  	padding: 4px 4px;
+    font-size: 1em;
+  }
 	.navmenu-brand-corto{
 		display: none;
 	}
 	.navmenu-brand-completo{
 		display: inline-block;
 	}
+  .navbar-muni{
+    margin-top: 6px;
+  }
 }
 
 @media (min-width: 992px) {
+  .navbar-muni{
+    margin-top: 3px;
+  }
   .navbar {
     right: auto;
     /*background: none;*/
@@ -580,6 +601,10 @@ calendar{
 	background-color: #4B53EF;
 }
 
+.logo-act{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .no-top-padding{
 	padding: 0;
 }
@@ -663,7 +688,24 @@ calendar{
 }
 
 .side-navbar-title{
-	height: 56px;
+	height: 57px;
 	background-color: #4B53EF;
 	width:100%;
+}
+.navbar-titulo{
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.navbar-no-shadow{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow:none;
+  border: none;
+}
+
+.body-act{
+  background-color: #F7F7F7;
+  padding-top: 56px;
 }

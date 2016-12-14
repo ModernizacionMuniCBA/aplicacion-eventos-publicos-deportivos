@@ -20,13 +20,13 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 		function handleData(data) {
 			$.each(data.results, function(i, item) {
 				if(item.inicia != null){
-					// 	var event_date_aux = new Date(item.inicia);
-					start_date = new Date(dateFormat(item.inicia, "mmmm dd, yyyy h:MM TT"));
-			 		if (item.image != undefined ){
-				 		var event_image = item.image.thumbnail.replace(/^http:\/\//i, 'https://');
+
+					var event_date_aux = new Date(item.inicia);
+		 			if (item.image != undefined ){
+				 		var event_image = item.image.original.replace(/^http:\/\//i, 'https://');
 			 		}else{
-						var event_image = "img/default-event-sq.png";
-					}
+				 		var event_image = "img/logo-turismo-sq.png";
+			 		}
 					var yourString = item.descripcion; //replace with your string.
 					var maxLength = 120; // maximum number of characters to extract
 
@@ -37,12 +37,8 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 					}else{
 						var trimmedString = yourString;
 					}
-					var month = dateFormat(start_date, "mmm");
-					var day = dateFormat(start_date, "dd");
-					//re-trim if we are in the middle of a word
-					// $('#event-list').append('<div class="col-xs-12 col-md-4 act-card-holder"><a href="actividad.html#act-'+item.id+'"><div class="act-card"><div class="row"><div class="col-xs-9"><h1 class="card-title">'+item.titulo+'</h1><div class="event-divider"></div></div><div class="col-xs-3 event-date"><p>'+month+'<br/>'+day+'</p></div></div><div class="row"><div class="col-xs-3 act-card-img padding-15"><div class="evento-img-cont" style="background-image: url('+event_image+');"></div></div><div class="col-xs-9 act-card-info">'+trimmedString+'</div></div><div class="act-card-icons"><a href="actividad.html#act-'+item.id+'" class="pull-right icon-act-card"><i class="material-icons">add</i></a></div></div></a></div>');
-					$('#event-list').append('<a href="actividad.html#act-'+item.id+'"><div class="col-xs-12 event-item"><div class="row"><div class="col-xs-3 image" style="background-image: url('+event_image+');"></div><div class="col-xs-8"><h1 class="title">'+item.titulo+'</h1><p class="description">'+trimmedString+'</p></div></div></div></a>');
 
+					$('#event-list').append('<a href="actividad.html#act-'+item.id+'"><div class="col-xs-12 event-item"><div class="row"><div class="col-xs-3 image" style="background-image: url('+event_image+');"></div><div class="col-xs-8"><h1 class="title">'+item.titulo+'</h1><p class="description">'+trimmedString+'</p><p class="date">'+dateFormat(item.inicia, "dddd dd 'de' mmmm <br>h:MM TT")+'</p></div></div></div></a>');
 
 	 			}
 			});
