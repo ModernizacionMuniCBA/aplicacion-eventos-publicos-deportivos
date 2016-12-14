@@ -1,6 +1,6 @@
 var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 var gobAbiertoAPI_actividades = "/actividad-publica/"
-var gobAbiertoAPI_audiencia = "&audiencia_id=4"
+var gobAbiertoAPI_audiencia = "&audiencia_id=2"
 var formatJson = "&format=json";
 var search = getParameterByName('search');
 var page_eventos = "&page=";
@@ -43,7 +43,7 @@ function handleData(data) {
             }
         });
     } else {
-        $('#event-list').append('No se encontraron actividades.');
+        $('#event-list').append('<span style="margin-left:30px;">No se encontraron actividades.</span>');
     }
     var htmlPrvNxt = '<div class="row evento"><nav aria-label="..."><ul class="pager">';
     if (data.previous != null) {

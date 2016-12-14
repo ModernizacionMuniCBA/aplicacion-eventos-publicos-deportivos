@@ -30,7 +30,7 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 			$('.event-date').hide();
 			$('#event-esp').hide();
 			$('#event-info').html('Este evento ya no se encuentra disponible');
-      var bottom = $('.navbar-feria').position().top + $('.navbar-feria').outerHeight(true)-10;
+      var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true)-10;
       $('body').css('padding-top', bottom);
       $('#loading').hide();
 		}

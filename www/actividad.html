@@ -15,8 +15,6 @@
     <title>Agenda de Cultura</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -27,7 +25,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/index.js"></script>
     <meta property='og:title' content='Agenda de Turismo'/>
-    <meta property="og:image" content="http://modernizacionmunicba.github.io/feria-del-libro/www/img/share-img.png">
+    <meta property="og:image" content="http://modernizacionmunicba.github.io/eventos-turismo/www/img/share-img.png">
   </head>
     <body class="no-top-padding body-act">
       <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
@@ -176,7 +174,6 @@
     <script src="js/dateformat.js"></script>
     <script src="js/get_activity.js"></script>
     <!-- BEGIN: MENU  -->
-    <script src="js/get_events.js"></script>
     <script src="js/get_categories.js"></script>
     <script src="js/get_places.js"></script>
     <script src="js/get_disciplinas.js"></script>
@@ -233,11 +230,11 @@
 				$('#calendario').hide();
 				$('#share-icons').show();
 			}
-		// if (inCordova) {
-		// 	touchAnalytics('/agenda-de-la-feria/app-evento', 'Evento app feria del libro');
-		// } else {
-		// 	ga('send', 'pageview');
-		// }
+		if (inCordova) {
+			touchAnalytics('/eventos-turismo/app-evento', 'Evento app Turismo');
+		} else {
+			ga('send', 'pageview');
+		}
     </script>
 
   </body>

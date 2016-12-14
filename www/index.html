@@ -19,8 +19,6 @@
 	<title>Agenda de Turismo de la Ciudad de Córdoba</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -28,8 +26,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- <script type="text/javascript" src="cordova.js"></script> -->
-    <!-- <script src="js/index.js"></script> -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/index.js"></script>
 
   </head>
   <body>
@@ -153,7 +151,6 @@
     <script src="js/page_size.js"></script>
     <script src="js/url_spliter.js"></script>
     <!-- BEGIN: MENU  -->
-    <script src="js/get_events.js"></script>
     <script src="js/get_categories.js"></script>
     <script src="js/get_places.js"></script>
     <script src="js/get_disciplinas.js"></script>
@@ -164,11 +161,11 @@
 
 
     <script>
-		// if (inCordova) {
-		// 	touchAnalytics('/agenda-de-la-feria/app-home', 'Home app feria del libro');
-		// } else {
-		// 	ga('send', 'pageview');
-		// }
+		if (inCordova) {
+			touchAnalytics('/eventos-turismo/app-home', 'Home app Turismo');
+		} else {
+			ga('send', 'pageview');
+		}
     </script>
 
   </body>
