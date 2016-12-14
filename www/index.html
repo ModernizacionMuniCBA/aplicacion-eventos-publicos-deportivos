@@ -32,16 +32,16 @@
     <!-- <script src="js/index.js"></script> -->
 
   </head>
-  <body class="no-top-padding">
-    <!-- <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <body>
+    <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
       <ul class="nav navmenu-nav">
         <li>
           <div class="row">
             <div class="col-xs-12">
-              <div style="height: 56px; background-color: #4B53EF; width:100%;">
+              <div class="side-navbar-title">
                 <div class="row">
                   <div class="col-xs-7">
-                    <img src="img/logo-cultura-menu.png" class="img-responsive img-menu-cultura">
+                    <img src="img/turismo-cordobes.png" class="img-responsive img-menu-cultura">
                   </div>
                   <div class="col-xs-5">
                     <img src="img/muni-menu.png" class="img-responsive img-menu-muni">
@@ -58,19 +58,7 @@
   	  </ul>
       <div class="nav navmenu-nav">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
-            <div class="panel-heading collapsed" role="tab" id="headingEventos" data-parent="#accordion" data-toggle="collapse" href="#collapseEventos" aria-expanded="false" aria-controls="collapseEventos">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button">
-                  EVENTOS
-                </a>
-              </h4>
-            </div>
-            <div id="collapseEventos" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEventos">
-              <div class="panel-body" id="events-menu">
-              </div>
-            </div>
-          </div>
+
           <div class="panel panel-default">
             <div class="panel-heading collapsed" role="tab" id="headingTipo" data-toggle="collapse" data-parent="#accordion" href="#collapseTipo" aria-expanded="false" aria-controls="collapseTipo">
               <h4 class="panel-title">
@@ -116,50 +104,44 @@
   	    <li><a href="about.html">SOBRE ESTA APP</a></li>
   	  </ul>
     </nav>
-	<div class="navbar navbar-feria navbar-fixed-top">
-	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	  <p class="navmenu-brand navmenu-brand-corto">Agenda de Turismo</p>
-    <p class="navmenu-brand navmenu-brand-completo">Agenda de Turismo de Córdoba</p>
-    <img src="img/muni-about.png" class="img-responsive navbar-muni pull-right">
-
-	  <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
-    <div class="searchField">
-		  <div class="row">
-			  <div class="col-xs-12">
-				  <form id="searchForm" action="search.html">
-				  	<input type="text" name="search" id="searchField" placeholder="Buscar una actividad..">
-				  </form>
-			  </div>
-		  </div>
-	  </div>
-	</div> -->
-  <div class="container-fluid app-logo">
+	<div class="navbar navbar-turismo navbar-fixed-top">
     <div class="row">
-      <div class="col-xs-offset-9 col-xs-3"><img src="img/muni-logo.png" class="img-responsive logo-home"></div>
-    </div>
-
-  </div>
-    <div class="container">
-	    <div class="row" id="categories-list">
-        <div class="col-xs-12 event-type">
-          <div class="row">
-            <div class="col-xs-2">
-            </div>
-            <div class="col-xs-8">
-              <h1 class="title">Agenda</h1>
-              <p class="description">Prueba, Prueba, Prueba, Prueba, Prueba, Prueba</p>
-            </div>
-            <div class="col-xs-1">
-              <p class="enter">❯</p>
-            </div>
+      <div class="col-xs-1">
+    	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    	    <span class="icon-bar"></span>
+    	    <span class="icon-bar"></span>
+    	    <span class="icon-bar"></span>
+    	  </button>
+      </div>
+      <div class="col-xs-6 navbar-titulo">
+    	  <p class="navmenu-brand navmenu-brand-corto">Agenda de Turismo</p>
+        <p class="navmenu-brand navmenu-brand-completo">Agenda de Turismo</p>
+      </div>
+      <div class="col-xs-4">
+        <div class="row">
+          <div class="col-xs-12 no-side-padding">
+            <img src="img/turismo-cordobes-2l.png" class="img-responsive navbar-muni pull-right">
+            <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
           </div>
+      </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="searchField">
+    		  <div class="row">
+    			  <div class="col-xs-12">
+    				  <form id="searchForm" action="search.html">
+    				  	<input type="text" name="search" id="searchField" placeholder="Buscar una actividad..">
+    				  </form>
+    			  </div>
+    		  </div>
         </div>
-        <!-- <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
-	     </div> -->
+  	  </div>
+    </div>
+	</div>
+    <div class="container">
+	    <div class="row" id="event-list">
+        <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
+	     </div>
      </div>
      <div class="row" id="event-next"></div>
    </div>
@@ -171,16 +153,16 @@
     <script src="js/page_size.js"></script>
     <script src="js/url_spliter.js"></script>
     <!-- BEGIN: MENU  -->
-    <!-- <script src="js/get_events.js"></script>
-
+    <script src="js/get_events.js"></script>
+    <script src="js/get_categories.js"></script>
     <script src="js/get_places.js"></script>
-    <script src="js/get_disciplinas.js"></script> -->
+    <script src="js/get_disciplinas.js"></script>
     <script src="js/search_bar.js"></script>
     <!--  END: MENU -->
     <script src="js/get_activities.js"></script>
   	<script src="js/h_scroll.js"></script>
 
-    <script src="js/get_categories.js"></script>
+
     <script>
 		// if (inCordova) {
 		// 	touchAnalytics('/agenda-de-la-feria/app-home', 'Home app feria del libro');

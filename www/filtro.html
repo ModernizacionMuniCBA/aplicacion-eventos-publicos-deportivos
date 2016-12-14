@@ -10,7 +10,7 @@
                     font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Agenda de la Feria</title>
+    <title>Agenda de Turismo</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
@@ -33,10 +33,10 @@
             <div class="col-xs-12">
               <div class="side-navbar-title">
                 <div class="row">
-                  <div class="col-xs-6">
-                    <img src="img/logo-cultura-menu.png" class="img-responsive img-menu-cultura">
+                  <div class="col-xs-7">
+                    <img src="img/turismo-cordobes.png" class="img-responsive img-menu-cultura">
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-xs-5">
                     <img src="img/muni-menu.png" class="img-responsive img-menu-muni">
                   </div>
                 </div>
@@ -47,23 +47,10 @@
         </li>
       </ul>
   	  <ul class="nav navmenu-nav">
-  	    <li><a href="index.html">INICIO</a></li>
+  	    <li class="active"><a href="index.html">INICIO</a></li>
   	  </ul>
       <div class="nav navmenu-nav">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <!-- <div class="panel panel-default">
-            <div class="panel-heading collapsed" role="tab" id="headingEventos" data-parent="#accordion" data-toggle="collapse" href="#collapseEventos" aria-expanded="false" aria-controls="collapseEventos">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button">
-                  EVENTOS
-                </a>
-              </h4>
-            </div>
-            <div id="collapseEventos" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEventos">
-              <div class="panel-body" id="events-menu">
-              </div>
-            </div>
-          </div> -->
           <div class="panel panel-default">
             <div class="panel-heading collapsed" role="tab" id="headingTipo" data-toggle="collapse" data-parent="#accordion" href="#collapseTipo" aria-expanded="false" aria-controls="collapseTipo">
               <h4 class="panel-title">
@@ -109,43 +96,44 @@
   	    <li><a href="about.html">SOBRE ESTA APP</a></li>
   	  </ul>
     </nav>
-	<div class="navbar navbar-feria navbar-fixed-top">
-	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-    <p class="navmenu-brand navmenu-brand-corto">Agenda</p>
-    <img src="img/muni-about.png" class="img-responsive navbar-muni pull-right">
-    <!-- <div class="filtro-title-completo" style="margin-top: 15px;"><p class="navmenu-brand filtro-title">a</p></div> -->
-	  <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
-    <!-- <div class="row filtro-title-corto"><div class="col-xs-12"><p class="navmenu-brand filtro-title">a</p></div></div> -->
-    <div class="searchField">
-
-		  <div class="row">
-			  <div class="col-xs-12">
-				  <form id="searchForm" action="search.html">
-				  	<input type="text" name="search" id="searchField" placeholder="Buscar un evento..">
-				  </form>
-			  </div>
-		  </div>
-	  </div>
+	<div class="navbar navbar-turismo navbar-fixed-top">
+    <div class="row">
+      <div class="col-xs-1">
+    	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    	    <span class="icon-bar"></span>
+    	    <span class="icon-bar"></span>
+    	    <span class="icon-bar"></span>
+    	  </button>
+      </div>
+      <div class="col-xs-6 navbar-titulo">
+    	  <p class="navmenu-brand navmenu-brand-corto">Agenda de Turismo</p>
+        <p class="navmenu-brand navmenu-brand-completo">Agenda de Turismo</p>
+      </div>
+      <div class="col-xs-4">
+        <div class="row">
+          <div class="col-xs-12 no-side-padding">
+            <img src="img/turismo-cordobes-2l.png" class="img-responsive navbar-muni pull-right">
+            <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
+          </div>
+      </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="searchField">
+    		  <div class="row">
+    			  <div class="col-xs-12">
+    				  <form id="searchForm" action="search.html">
+    				  	<input type="text" name="search" id="searchField" placeholder="Buscar una actividad..">
+    				  </form>
+    			  </div>
+    		  </div>
+        </div>
+  	  </div>
+    </div>
 	</div>
   <div class="container">
     <div class="row" id="event-list">
-      <div class="col-xs-12 event-item">
-        <div class="row">
-          <div class="col-xs-3 image" style="background-image: url('img/logo-turismo-sq.png');">
-          </div>
-          <div class="col-xs-8">
-            <h1 class="title">Agenda</h1>
-            <p class="description">Texto, Texto, Texto, Texto, Texto, Texto, Texto</p>
-            <p class="date">12 de Diciembre <br/>20:00Hs</p>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
-     </div> -->
+      <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
+     </div>
    </div>
    <div class="row" id="event-next"></div>
  </div>
@@ -157,7 +145,6 @@
     <script src="js/dateformat.js"></script>
     <script src="js/page_size.js"></script>
     <script src="js/url_spliter.js"></script>
-    <script src="js/get_evento.js"></script>
     <!-- BEGIN: MENU  -->
     <!-- <script src="js/get_events.js"></script> -->
     <script src="js/get_categories.js"></script>
