@@ -68,11 +68,17 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 				}
 			});
 
-      var bottom = $('#img-logo-act').position().top + $('#img-logo-act').outerHeight(true);
-			$('#event-info-holder').css('padding-top', bottom);
+      // var bottom = $('#img-logo-act').position().top + $('#img-logo-act').outerHeight(true);
+			// $('#event-info-holder').css('padding-top', bottom);
 			$('#loading').hide();
 		}
 		$(window).on('resize', function(){
       var bottom = $('#img-logo-act').position().top + $('#img-logo-act').outerHeight(true);
 			$('#event-info-holder').css('padding-top', bottom);
 		});
+    $("#img-logo-act").load(function() {
+      var bottom = $('#img-logo-act').position().top + $('#img-logo-act').outerHeight(true);
+			$('#event-info-holder').css('padding-top', bottom);
+    }).each(function() {
+      if(this.complete) $(this).load();
+    });
