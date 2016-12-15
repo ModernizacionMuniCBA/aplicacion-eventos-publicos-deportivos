@@ -69,7 +69,13 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 			});
 
       var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true)-20;
-			$('body').css('padding-top', bottom);
+      $("img").one("load", function() {
+        // do stuff
+        $('body').css('padding-top', bottom);
+      }).each(function() {
+        if(this.complete) $(this).load();
+      });
+
 			$('#loading').hide();
 		}
 		$(window).on('resize', function(){
