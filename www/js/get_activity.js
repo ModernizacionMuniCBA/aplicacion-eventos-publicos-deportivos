@@ -18,16 +18,13 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 		}else{
 			var share_url = "https://modernizacionmunicba.github.io/eventos-turismo/www/actividad.html%23act-"+actividad;
 		}
-    $("#img-logo-act").load(function() {
-      $.ajax({
-  			dataType: "json",
-  			url: gobAbiertoAPI+gobAbiertoAPI_actividades+actividad+formatJson,
-  			success: handleData,
-              error: handleError,
-  		});
-    }).each(function() {
-      if(this.complete) $(this).load();
-    });
+
+		$.ajax({
+			dataType: "json",
+			url: gobAbiertoAPI+gobAbiertoAPI_actividades+actividad+formatJson,
+			success: handleData,
+            error: handleError,
+		});
 		var start_date = new Date();
 		function handleError(){
 			$('.event-date').hide();
