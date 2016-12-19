@@ -1,6 +1,6 @@
 var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 var gobAbiertoAPI_actividades = "/actividad-publica/"
-var gobAbiertoAPI_audiencia = "&audiencia_id=2"
+var gobAbiertoAPI_audiencia = "&audiencia_id=" + app.audiencia_id;
 var formatJson = "&format=json";
 var search = getParameterByName('search');
 var page_eventos = "&page=";

@@ -6,7 +6,13 @@ var uuid_analytics = "UA-79840006-1";
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+
+
 var app = {
+
+    // variables de la apliacion
+    audiencia_id: "4",
+
     // Application Constructor
     initialize: function() {
         this.addLog("Initialize");
