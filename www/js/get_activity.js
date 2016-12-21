@@ -52,7 +52,11 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
         $('.event-tags').append('<div class="tag-holder"><a href="filtro.html#tipo-'+ tag.id +'""><span class="tag">'+tag.nombre+'</span></a></div>');
       });
       $('#event-location').append('<a class="event-location" href="filtro.html#lugar-'+ data.lugar.id +'">'+ data.lugar.nombre +'</a>');
-			$('#event-info').html(data.descripcion);
+      if(data.lugar.latitud != 0.0 || data.lugar.longitud != 0.0){
+        // alert("Lugar");
+        $('#event-location').append('<br/><br/><a class="event-location" href="https://www.google.com/maps/?q='+data.lugar.latitud+','+data.lugar.longitud+'" target="_blank"><i class="glyphicon glyphicon-map-marker"/> Ver en Google Maps</a>');
+      }
+      $('#event-info').html(data.descripcion);
 
 			$("#share").attr("href", url);
 			$('#share-icons').append('<a href="http://twitter.com/share?url='+share_url+'&text='+page_title+'" target="_blank" class="share-btn twitter">Twitter</a>');
