@@ -11,7 +11,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 var app = {
 
     // variables de la apliacion
-    audiencia_id: "4",
+    audiencia_id: "2",
 
     // Application Constructor
     initialize: function() {
