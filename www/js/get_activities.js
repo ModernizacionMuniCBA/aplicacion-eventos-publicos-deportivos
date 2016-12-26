@@ -25,7 +25,7 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 		 			if (item.image != undefined ){
 				 		var event_image = item.image.original.replace(/^http:\/\//i, 'https://');
 			 		}else{
-				 		var event_image = "img/logo-turismo-sq.png";
+				 		var event_image = "img/logo-turismo-sq.jpg";
 			 		}
 					var yourString = item.descripcion; //replace with your string.
 					var maxLength = 120; // maximum number of characters to extract
