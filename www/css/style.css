@@ -14,6 +14,10 @@
     font-family: Gotham-book-italic;
     src: url(../fonts/Gotham-BookItalic.otf);
 }
+@font-face {
+    font-family: Gotham-black;
+    src: url(../fonts/Gotham-Black.otf);
+}
 html, body {
     height: 100%;
 }
@@ -68,7 +72,7 @@ p{
 	background-color: #f0f0f0;
 	border-left: none;
 	border-right: none;
-	color: #4B53EF;
+	color: #009162;
 }
 
 .panel-default>.panel-heading.collapsed{
@@ -225,7 +229,7 @@ p{
 }
 
 .navbar-turismo{
-	background-color: #4b53ef;
+	background-color: #009162;
 	color: #FFF;
 	padding-top: 5px;
 	width: 100%;
@@ -244,9 +248,29 @@ p{
 	color: #FFF;
 	text-align: right;
 }
+.version-platform{
+	font-size: 1.1em;
+	color: #FFF;
+	text-align: center;
+}
+
+.version-platform-link{
+  color: #FFF;
+  text-decoration: underline;
+}
+.version-platform-link:hover{
+  color: #009162;
+}
+.version-platform-link.bg-green:hover{
+  color: #43B6BA;
+}
 .navbar-turismo a{
 	color: #2b8838;
 	font-size: 20px;
+}
+
+.menu-img{
+  /*min-height: 150px;*/
 }
 
 .img-menu-cultura{
@@ -362,7 +386,7 @@ h1{
 	font-size: 1em;
 }
 #event-name{
-	font-size: 1.2em;
+	font-size: 1.4em;
 	color: #000;
 	margin-top: 30px;
   text-transform: none;
@@ -380,9 +404,11 @@ h1{
 p#event-info{
 	margin-top: 20px;
 	color: #03171d;
+  font-size: 1.2em;
 }
 #event-location{
 	margin-bottom: 20px;
+  font-size: 1.2em;
 }
 .event-tags{
   margin-top: 10px;
@@ -392,10 +418,11 @@ p#event-info{
   display: inline-block;
 }
 .event-tags .tag{
+  font-size: 1.2em;
 	padding:5px 10px;
-	background-color: #4B53EF;
+	background-color: #009162;
 	color: #FFF;
-  border: 2px solid #4B53EF;
+  border: 2px solid #009162;
 	border-radius: 5px;
 }
 .info-evento .event-date{
@@ -411,9 +438,8 @@ p#event-info{
 	color: #777;
 }
 
-
 .event-date-time .event-date{
-	font-size: 1.0em;
+	font-size: 1.2em;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin:0;
@@ -458,8 +484,8 @@ p#event-info{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	color: #000;
-	border-top: 5px solid #131dda;
-	border-bottom: 5px solid #131dda;
+	border-top: 5px solid #009162;
+	border-bottom: 5px solid #009162;
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 }
@@ -471,18 +497,19 @@ p#event-info{
 }
 .page-prev{
 	margin-left: 25px;
-	color: #4B53EF;
+	color: #009162;
 }
 
 .page-next{
 	margin-right: 25px;
-	color: #4B53EF;
+	color: #009162;
 }
 .pager li>a, .pager li>span{
 	background-color: transparent;
 }
 
 .share-btn {
+  font-size: 1.2em;
     display: inline-block;
     color: #ffffff;
     border: none;
@@ -528,83 +555,22 @@ calendar{
 	display: inline-block;
 }
 
-@media (min-width: 0) {
-  .navbar-turismo .navmenu-search{
-  	margin-top: 10px;
-  	padding: 2px 2px;
-    font-size: 0.8em;
-  }
-  .navbar-toggle {
-    display: block;
-  }
-	.navmenu-brand-corto{
-		display: inline-block;
-	}
-	.navmenu-brand-completo{
-		display: none;
-	}
-	.filtro-title-completo{
-		display: none;
-	}
-	.filtro-title-corto{
-		display: block;
-	}
-  .navbar-muni{
-    margin-top: 9px;
-  }
-}
-@media (min-width: 400px) {
-  .navbar-turismo .navmenu-search{
-  	margin-top: 6px;
-  	padding: 4px 4px;
-    font-size: 1em;
-  }
-	.navmenu-brand-corto{
-		display: none;
-	}
-	.navmenu-brand-completo{
-		display: inline-block;
-	}
-  .navbar-muni{
-    margin-top: 6px;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-muni{
-    margin-top: 3px;
-  }
-  .navbar {
-    right: auto;
-    /*background: none;*/
-    border: none;
-  }
-  .canvas {
-    padding: 0;
-  }
-	.filtro-title-completo{
-		display: inline-block;
-	}
-	.filtro-title-corto{
-		display: none;
-	}
-}
 
 .about-turismo{
-	background-color: #4B53EF;
+	background-color: #009162;
 	padding-top: 80px;
 }
 
 .app-logo{
 	height: 40%;
 	min-height: 40%;
-	background-color: #4B53EF;
+	background-color: #009162;
 }
 
-.logo-act{
+/*.logo-act{
   margin-top: 20px;
   margin-bottom: 20px;
-}
+}*/
 .no-top-padding{
 	padding: 0;
 }
@@ -660,7 +626,7 @@ calendar{
 }
 
 .event-item .title{
-	font-size: 1.1em;
+	font-size: 1.4em;
 	color: #000;
 	text-align: left;
 	font-family: "Gotham-medium", sans-serif;
@@ -670,7 +636,7 @@ calendar{
 }
 
 .event-item .description{
-	font-size: 1em;
+	font-size: 1.2em;
 	text-transform: none;
 	color: #6D6D6D;
 	line-height: 1.2em;
@@ -679,7 +645,7 @@ calendar{
 }
 
 .event-item .date{
-	font-size: 0.9em;
+	font-size: 1.1em;
 	text-transform: none;
 	color: #6D6D6D;
 	line-height: 1.2em;
@@ -689,7 +655,7 @@ calendar{
 
 .side-navbar-title{
 	height: 57px;
-	background-color: #4B53EF;
+	background-color: #009162;
 	width:100%;
 }
 .navbar-titulo{
@@ -712,4 +678,110 @@ calendar{
 
 .muni-logo-act{
   margin-bottom: 10px;
+}
+.turismo-cba-header{
+  font-family: "Gotham-black", sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  border-top: 2px solid #FFF;
+  padding-top: 10px;
+}
+
+#event-flyer{
+  margin-bottom: 10px;
+}
+
+.navbar-turismo-cba{
+  font-family: "Gotham-black", sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+}
+.navbar-turismo-cba.img-menu-cultura{
+  font-size: 1em;
+  text-align: left;
+  color: #FFF;
+}
+@media (min-width: 0) {
+  .navbar-turismo .navmenu-search{
+  	margin-top: 10px;
+  	padding: 2px 2px;
+    font-size: 0.8em;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+	.navmenu-brand-corto{
+		display: inline-block;
+    padding-left: 15px !important;
+    padding-top: 0;
+	}
+	.navmenu-brand-completo{
+		display: none;
+	}
+	.filtro-title-completo{
+		display: none;
+	}
+	.filtro-title-corto{
+		display: block;
+	}
+  .navbar-muni{
+    margin-top: 9px;
+  }
+}
+@media(max-width:767px){
+  .navbar-turismo-cba{
+    font-size: 1em;
+  }
+}
+@media(min-width:768px){
+  .navbar-turismo .navmenu-search{
+    margin-top: 6px;
+    padding: 4px 4px;
+    font-size: 1em;
+  }
+  .navbar-muni{
+    margin-top: 6px;
+  }
+  .navmenu-brand-corto{
+		display: none;
+	}
+	.navmenu-brand-completo{
+		display: inline-block;
+	}
+  .navbar-turismo-cba{
+    font-size: 1.2em;
+  }
+}
+@media(min-width:992px){
+  .version-platform{
+    text-align: right;
+  }
+  .navbar-muni{
+    margin-top: 3px;
+  }
+  .navbar {
+    right: auto;
+    /*background: none;*/
+    border: none;
+  }
+  .canvas {
+    padding: 0;
+  }
+	.filtro-title-completo{
+		display: inline-block;
+	}
+	.filtro-title-corto{
+		display: none;
+	}
+}
+@media(min-width:1200px){
+  .navbar-turismo-cba{
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+}
+
+.navbar-title{
+  font-family:'Gotham-Medium';
+  font-size: 1.2em;
 }

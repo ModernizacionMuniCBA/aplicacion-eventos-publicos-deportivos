@@ -33,7 +33,7 @@
               <div class="side-navbar-title">
                 <div class="row">
                   <div class="col-xs-7">
-                    <img src="img/turismo-cordobes.png" class="img-responsive img-menu-cultura">
+                    <h2 class="img-menu-cultura navbar-turismo-cba">Turismo Córdoba Ciudad</h2>
                   </div>
                   <div class="col-xs-5">
                     <img src="img/muni-menu.png" class="img-responsive img-menu-muni">
@@ -95,40 +95,44 @@
   	    <li><a href="about.html">SOBRE ESTA APP</a></li>
   	  </ul>
     </nav>
-	<div class="navbar navbar-turismo navbar-fixed-top">
-    <div class="row">
-      <div class="col-xs-1">
-    	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-    	    <span class="icon-bar"></span>
-    	    <span class="icon-bar"></span>
-    	    <span class="icon-bar"></span>
-    	  </button>
-      </div>
-      <div class="col-xs-6 navbar-titulo">
-    	  <p class="navmenu-brand navmenu-brand-corto">Agenda de Turismo</p>
-        <p class="navmenu-brand navmenu-brand-completo">Agenda de Turismo</p>
-      </div>
-      <div class="col-xs-4">
-        <div class="row">
-          <div class="col-xs-12 no-side-padding">
-            <img src="img/turismo-cordobes-2l.png" class="img-responsive navbar-muni pull-right">
-            <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
-          </div>
-      </div>
-      </div>
-      <div class="col-xs-12">
-        <div class="searchField">
-    		  <div class="row">
-    			  <div class="col-xs-12">
-    				  <form id="searchForm" action="search.html">
-    				  	<input type="text" name="search" id="searchField" placeholder="Buscar una actividad..">
-    				  </form>
-    			  </div>
-    		  </div>
+    <div class="navbar navbar-turismo navbar-fixed-top">
+      <div class="row">
+        <div class="col-xs-1">
+      	  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+      	    <span class="icon-bar"></span>
+      	    <span class="icon-bar"></span>
+      	    <span class="icon-bar"></span>
+      	  </button>
         </div>
-  	  </div>
-    </div>
-	</div>
+        <div class="col-xs-6 navmenu-brand-completo">
+      	  <p class="navmenu-brand navmenu-brand-completo"></p>
+        </div>
+        <div class="col-xs-6 navmenu-brand-corto"></div>
+        <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-12 no-side-padding">
+              <!-- <img src="img/turismo-cordobes-2l.png" class="img-responsive navbar-muni pull-right"> -->
+              <h3 class="navbar-muni pull-right navbar-turismo-cba" style="width: 100%;">Turismo Córdoba Ciudad</h3>
+              <a href="javascript:void(0)" onclick="searchFunc();"><i class="glyphicon glyphicon-search navmenu-search"></i></a>
+            </div>
+        </div>
+        </div>
+        <div class="col-xs-12 navmenu-brand-corto">
+          <p class="navmenu-brand navmenu-brand-corto"></p>
+        </div>
+        <div class="col-xs-12">
+          <div class="searchField">
+      		  <div class="row">
+      			  <div class="col-xs-12">
+      				  <form id="searchForm" action="search.html">
+      				  	<input type="text" name="search" id="searchField" placeholder="Buscar una actividad..">
+      				  </form>
+      			  </div>
+      		  </div>
+          </div>
+    	  </div>
+      </div>
+  	</div>
   <div class="container">
     <div class="row" id="event-list">
       <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>

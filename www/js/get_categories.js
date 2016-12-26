@@ -10,6 +10,6 @@
 
 		function handleData(data) {
 		    $.each(data.results, function(i, category) {
-		        $('#categories-menu').append('<div class="row row-li-tipo"><li><a href="filtro.html#tipo-' + category.id + '"><div class="col-xs-3"><div class="circle-image-li" style="background-image: url(img/logo-turismo-sq.png);"></div></div><div class="col-xs-9 nombre-tipo">' + category.nombre + '</div></a></li></div>');
+		        $('#categories-menu').append('<div class="row row-li-tipo"><li><a href="filtro.html#tipo-' + category.id + '"><div class="col-xs-3"><div class="circle-image-li" style="background-image: url(img/logo-turismo-sq.jpg);"></div></div><div class="col-xs-9 nombre-tipo">' + category.nombre + '</div></a></li></div>');
 		    });
 		}

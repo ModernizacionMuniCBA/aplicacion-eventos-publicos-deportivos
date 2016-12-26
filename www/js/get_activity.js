@@ -47,6 +47,14 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 			$("meta[property='og\\:title']").attr("content", page_title);
 			$(document).prop('title', data.titulo);
 
+      if (data.imagen.original != undefined){
+        $('.menu-img').css("background-image", "url("+data.imagen.original.replace(/^http:\/\//i, 'https://')+")");
+        $('.menu-img').css("background-position", "left center");
+        $('.menu-img').css("background-size", "cover");
+      }
+      if (data.flyer.original != undefined){
+        $('#event-flyer').append('<img src="'+data.flyer.original.replace(/^http:\/\//i, 'https://')+'"class="img-responsive"/>');
+      }
 
       $.each(data.tipos, function(i, tag) {
         $('.event-tags').append('<div class="tag-holder"><a href="filtro.html#tipo-'+ tag.id +'""><span class="tag">'+tag.nombre+'</span></a></div>');
@@ -72,16 +80,14 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 				}
 			});
 
-      // var bottom = $('#img-logo-act').position().top + $('#img-logo-act').outerHeight(true);
-			// $('#event-info-holder').css('padding-top', bottom);
 			$('#loading').hide();
 		}
 		$(window).on('resize', function(){
-      var bottom = $('#img-logo-act').position().top + $('#img-logo-act').outerHeight(true);
+      var bottom = $('#img-logo-act-hd').position().top + $('#img-logo-act-hd').outerHeight(true)+60;
 			$('#event-info-holder').css('padding-top', bottom);
 		});
     $("#img-logo-act").load(function() {
-      var bottom = $('#img-logo-act').position().top + $('#img-logo-act').outerHeight(true);
+      var bottom = $('#img-logo-act-hd').position().top + $('#img-logo-act-hd').outerHeight(true)+60;
 			$('#event-info-holder').css('padding-top', bottom);
     }).each(function() {
       if(this.complete) $(this).load();

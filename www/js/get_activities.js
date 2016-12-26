@@ -60,18 +60,14 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 			// var bottom = $('.fixed-img').position().top + $('.fixed-img').outerHeight(true) + 20;
 			// $('.fixed-img').css('height', height  + $('.event-date-time').outerHeight(true)/2);
 			// $('.img-holder').css('height', $('.foreground').outerHeight(true));
-			// bottom = $('.fixed-img').position().top + $('.fixed-img').outerHeight(true) + 30;
-			// $('body').css('padding-top', bottom);
+			bottom = $('.navbar.navbar-turismo.navbar-fixed-top').position().top + $('.navbar.navbar-turismo.navbar-fixed-top').outerHeight(true);
+			$('body').css('padding-top', bottom);
 			$('#loading').hide();
 
 		}
 
 			$(window).on('resize', function(){
-				// var height = $('.foreground').outerHeight(true) - $('.event-date-time').outerHeight(true);
-			// var bottom = $('.fixed-img').position().top + $('.fixed-img').outerHeight(true) + 20;
-			// $('.fixed-img').css('height', height  + $('.li-title').outerHeight(true)/2);
-			// $('.img-holder').css('height', $('.foreground').outerHeight(true));
-			// bottom = $('.fixed-img').position().top + $('.fixed-img').outerHeight(true) + 30;
-			// $('body').css('padding-top', bottom);
-			// $('#loading').hide();
+				bottom = $('.navbar.navbar-turismo.navbar-fixed-top').position().top + $('.navbar.navbar-turismo.navbar-fixed-top').outerHeight(true);
+				$('body').css('padding-top', bottom);
+				$('#loading').hide();
 			});

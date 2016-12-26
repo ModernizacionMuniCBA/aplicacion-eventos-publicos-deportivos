@@ -38,7 +38,7 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 		 			if (item.image != undefined ){
 				 		var event_image = item.image.original.replace(/^http:\/\//i, 'https://');
 			 		}else{
-				 		var event_image = "img/logo-turismo-sq.png";
+				 		var event_image = "img/logo-turismo-sq.jpg";
 			 		}
 					var yourString = item.descripcion; //replace with your string.
 					var maxLength = 120; // maximum number of characters to extract
@@ -78,17 +78,17 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 				if (dataType == "tipo"){
 					$.each(data.results[0].tipos, function(i, tipo) {
 						if(tipo.id == actividad){
-							$('.navmenu-brand').html(tipo.nombre);
+							$('.navmenu-brand').html('<span style="font-family:\'Gotham-Medium\';">'+tipo.nombre+'</span>');
 							$(document).prop('title', tipo.nombre);
 						}
 					});
 				}else if (dataType == "lugar"){
-					$('.navmenu-brand').html(data.results[0].lugar.nombre);
+					$('.navmenu-brand').html('<span style="font-family:\'Gotham-Medium\';">'+data.results[0].lugar.nombre+'</span>');
 					$(document).prop('title', data.results[0].lugar.nombre);
 				}else if (dataType == "disciplina"){
 					$.each(data.results[0].disciplinas, function(i, disciplina) {
 						if(disciplina.id == actividad){
-							$('.navmenu-brand').html(disciplina.nombre);
+							$('.navmenu-brand').html('<span style="font-family:\'Gotham-Medium\';">'+disciplina.nombre+'</span>');
 							$(document).prop('title', disciplina.nombre);
 						}
 					});
@@ -98,8 +98,11 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 				$('#event-list').append('No se encontraron actividades');
 			}
 			$('#loading').hide();
-			var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
+			// var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
+			// $('body').css('padding-top', bottom);
+			bottom = $('.navbar.navbar-turismo.navbar-fixed-top').position().top + $('.navbar.navbar-turismo.navbar-fixed-top').outerHeight(true);
 			$('body').css('padding-top', bottom);
+			$('#loading').hide();
 		}
 		if (dataType == "evento"){
 			$.ajax({
@@ -111,11 +114,17 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 					$('.navmenu-brand').html(data.nombre);
 					$(document).prop('title', data.nombre);
 			}
-			var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
+			// var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
+			// $('body').css('padding-top', bottom);
+			bottom = $('.navbar.navbar-turismo.navbar-fixed-top').position().top + $('.navbar.navbar-turismo.navbar-fixed-top').outerHeight(true);
 			$('body').css('padding-top', bottom);
+			$('#loading').hide();
 		}
 
 		$(window).on('resize', function(){
-			var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
+			// var bottom = $('.navbar-turismo').position().top + $('.navbar-turismo').outerHeight(true);
+			// $('body').css('padding-top', bottom);
+			bottom = $('.navbar.navbar-turismo.navbar-fixed-top').position().top + $('.navbar.navbar-turismo.navbar-fixed-top').outerHeight(true);
 			$('body').css('padding-top', bottom);
+			$('#loading').hide();
 		});
