@@ -241,7 +241,7 @@ p{
 .version-title{
 	font-size: 1.1em;
 	color: #FFF;
-	text-align: left;
+	text-align: center;
 }
 .version-number{
 	font-size: 0.9em;
@@ -734,6 +734,9 @@ calendar{
   }
 }
 @media(min-width:768px){
+  .version-title{
+    text-align: left;
+  }
   .navbar-turismo .navmenu-search{
     margin-top: 6px;
     padding: 4px 4px;
@@ -784,4 +787,11 @@ calendar{
 .navbar-title{
   font-family:'Gotham-Medium';
   font-size: 1.2em;
+}
+
+
+.center-img{
+  display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
