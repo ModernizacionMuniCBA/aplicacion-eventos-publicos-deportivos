@@ -37,8 +37,11 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 					}else{
 						var trimmedString = yourString;
 					}
-
-					$('#event-list').append('<a href="actividad.html#act-'+item.id+'"><div class="col-xs-12 event-item"><div class="row"><div class="col-xs-3 image" style="background-image: url('+event_image+');"></div><div class="col-xs-8"><h1 class="title">'+item.titulo+'</h1><p class="description">'+trimmedString+'</p><p class="date">'+dateFormat(item.inicia, "dddd dd 'de' mmmm <br>h:MM TT")+'</p></div></div></div></a>');
+					var end_date = '';
+					if(item.termina!=null){
+						end_date = '<div class="col-xs-12 col-sm-6 col-md-5"><p class="date">'+dateFormat(item.termina, "dddd dd 'de' mmmm")+'</p></div>';
+					}
+					$('#event-list').append('<a href="actividad.html#act-'+item.id+'"><div class="col-xs-12 event-item"><div class="row"><div class="col-xs-3 image" style="background-image: url('+event_image+');"></div><div class="col-xs-8"><h1 class="title">'+item.titulo+'</h1><p class="description">'+trimmedString+'</p><div class="row"><div class="col-xs-12 col-sm-6 col-md-5"><p class="date">'+dateFormat(item.inicia, "dddd dd 'de' mmmm <br>h:MM TT")+'</p></div>'+end_date+'</div></div></div></div></a>');
 
 	 			}
 			});
