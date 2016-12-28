@@ -2,6 +2,10 @@ Date.prototype.addHours= function(h){
     this.setHours(this.getHours()+h);
     return this;
 }
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 		var gobAbiertoAPI_actividades = "/actividad-publica/"
@@ -46,11 +50,19 @@ var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
 			page_title = data.titulo;
 			$("meta[property='og\\:title']").attr("content", page_title);
 			$(document).prop('title', data.titulo);
-
+      var img_bg_default = ['./img/default-img-1.jpg','./img/default-img-2.jpg','./img/default-img-3.jpg','./img/default-img-4.jpg','./img/default-img-5.jpg']
+      var img_bg_default_conf = ["bottom center", "center center","center center","center center","center center"];
       if (data.imagen.original != undefined){
         $('.menu-img').css("background-image", "url("+data.imagen.original.replace(/^http:\/\//i, 'https://')+")");
-        $('.menu-img').css("background-position", "left center");
-        $('.menu-img').css("background-size", "cover");
+        $('.menu-img').css("background-position", "center center");
+      }else{
+        var i = randomIntFromInterval(0,4);
+
+        // $('.menu-img').css("background-image", "url('./img/default-img-4.jpg')");
+        // $('.menu-img').css("background-position", "center center");
+        $('.menu-img').css("background-image", "url("+img_bg_default[i]+")");
+        $('.menu-img').css("background-position", img_bg_default_conf[i]);
+
       }
       if (data.flyer.original != undefined){
         $('#event-flyer').append('<img src="'+data.flyer.original.replace(/^http:\/\//i, 'https://')+'"class="img-responsive"/>');
