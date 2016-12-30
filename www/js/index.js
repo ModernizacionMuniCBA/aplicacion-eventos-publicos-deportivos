@@ -20,7 +20,7 @@ var app = {
         ga('create', uuid_analytics, {'storage': 'none','clientId': uuid});    
         ga('set','checkProtocolTask', null); //just for mobile phonegap application
         ga('set','checkStorageTask',null);
-        ga('send', 'pageview', {'page': '/agenda-de-la-feria/app-home'}); 
+        ga('send', 'pageview', {'page': '/agenda-turistica/app-home'}); 
         this.addLog("initialize 2");
         
         this.bindEvents();

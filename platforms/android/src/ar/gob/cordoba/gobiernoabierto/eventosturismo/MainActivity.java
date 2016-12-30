@@ -17,7 +17,7 @@
        under the License.
  */
 
-package ar.gob.cordoba.gobiernoabierto.feriadellibro;
+package ar.gob.cordoba.gobiernoabierto.eventosturismo;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
