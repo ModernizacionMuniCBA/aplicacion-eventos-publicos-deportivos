@@ -1,3 +1,2 @@
-# eventos-turismo
-Aplicación de eventos públicos vinculados a turísmo de la Ciudad de Córdoba.  
-
+# aplicacion-eventos-publicos-deportivos
+Aplicación de eventos públicos vinculados a deportes en la Ciudad de Córdoba.  
